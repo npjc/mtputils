@@ -4,10 +4,12 @@
 \alias{well_labels_from_length}
 \title{get the labels for a microtitre plate based on the length of the vector.}
 \usage{
-well_labels_from_length(v)
+well_labels_from_length(wells = NULL, n = NULL)
 }
 \arguments{
-\item{v}{vector of length on which guess is based.}
+\item{wells}{vector of wells}
+
+\item{n}{number of wells}
 }
 \description{
 get the labels for a microtitre plate based on the length of the vector.

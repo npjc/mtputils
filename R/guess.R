@@ -1,10 +1,13 @@
 #' get the labels for a microtitre plate based on the length of the vector.
 #'
-#' @param v vector of length on which guess is based.
+#' @param wells vector of wells
+#' @param n number of wells
 #'
 #' @export
-well_labels_from_length <- function(v) {
-    n <- length(v)
+well_labels_from_length <- function(wells = NULL, n = NULL) {
+    if (!is.null(wells) & is.null(n)) {
+        n <- length(v)
+    }
     dims <- guess_dims_from_n(n)
     well_labels <- well_labels(nrow = dims$nrow, ncol = dims$ncol)
     well_labels
