@@ -12,4 +12,3 @@ well_labels_from_length(v)
 \description{
 get the labels for a microtitre plate based on the length of the vector.
 }
-\keyword{internal}

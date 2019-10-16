@@ -3,3 +3,4 @@
 export(col_labels)
 export(row_labels)
 export(well_labels)
+export(well_labels_from_length)
