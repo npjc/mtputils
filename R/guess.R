@@ -6,7 +6,7 @@
 #' @export
 well_labels_from_length <- function(wells = NULL, n = NULL) {
     if (!is.null(wells) & is.null(n)) {
-        n <- length(v)
+        n <- length(wells)
     }
     dims <- guess_dims_from_n(n)
     well_labels <- well_labels(nrow = dims$nrow, ncol = dims$ncol)
