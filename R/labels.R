@@ -28,10 +28,13 @@ well_labels <- function(nrow, ncol, byrow = TRUE,
     stopifnot(length(colnames) == ncol)
 
     if (byrow) {
-        sprintf(fmt, rep(rownames, each = ncol), rep.int(colnames, nrow))
+        out <- sprintf(fmt, rep(rownames, each = ncol), rep.int(colnames, nrow))
     } else {
-        sprintf(fmt, rep.int(rownames, ncol), rep(colnames, each = nrow))
+        out <- sprintf(fmt, rep.int(rownames, ncol), rep(colnames, each = nrow))
     }
+    # hack fix for platform specific padding with zeros 'bug' with sprintf()
+    gsub(' ', '0', out)
+
 }
 
 
